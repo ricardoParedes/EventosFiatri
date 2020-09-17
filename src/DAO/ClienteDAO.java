@@ -33,17 +33,17 @@ public class ClienteDAO implements iOperaciones <Cliente> {
 
     @Override
     public ArrayList<Cliente> buscar(Cliente ent) {
-        ArrayList<Cliente> lista = new ArrayList<>();
+        ArrayList<Cliente> lista = new ArrayList();
         try{   
         Connection cn = new ConexionDAO().getConnection();
-        String procedimientoAlmacenado= "{call sp_buscarCliente(?,?)}"; 
+        String procedimientoAlmacenado= "{call sp_buscarCliente(?)}"; 
         CallableStatement call= cn.prepareCall(procedimientoAlmacenado);
         call.setString("nombre", ent.getNombresCliente());
-        call.setString("apellido", ent.getApellidosCliente());
         ResultSet rs=call.executeQuery();
             while(rs.next()){
                 Cliente objCliente= new Cliente();
-                objCliente.setNombresCliente(rs.getString("NOMBRESCLIENTES"));
+                objCliente.setIdCliente(rs.getInt("IDCLIENTE"));
+                objCliente.setNombresCliente(rs.getString("NOMBRESCLIENTE"));
                 objCliente.setApellidosCliente(rs.getString("APELLIDOSCLIENTE"));
                 objCliente.setCedulaRucCliente(rs.getString("CEDULARUCCLIENTE"));
                 objCliente.setDireccionCliente(rs.getString("DIRECCIONCLIENTE"));

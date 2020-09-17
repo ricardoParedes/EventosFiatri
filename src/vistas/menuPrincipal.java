@@ -2,9 +2,8 @@ package vistas;
 import entidades.Cliente;
 import java.awt.Color;
 import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.StringTokenizer;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 import logicaNegocio.lnCliente;
 public class menuPrincipal extends javax.swing.JFrame {
     public menuPrincipal() {
@@ -73,6 +72,8 @@ public class menuPrincipal extends javax.swing.JFrame {
         rcedula2 = new javax.swing.JFormattedTextField();
         consultaCliente = new javax.swing.JTextField();
         bConsultarCliente = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTableConsultaCliente = new javax.swing.JTable();
         menu = new javax.swing.JMenuBar();
         Clientes = new javax.swing.JMenu();
         menuRegistrarCliente = new javax.swing.JMenuItem();
@@ -281,52 +282,52 @@ public class menuPrincipal extends javax.swing.JFrame {
 
         jLabel16.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         jLabel16.setText("Nombre:");
-        ConsultarCliente.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 200, -1, -1));
+        ConsultarCliente.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 380, -1, -1));
 
         jLabel17.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         jLabel17.setText("Apellido:");
-        ConsultarCliente.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 280, -1, -1));
+        ConsultarCliente.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 440, -1, -1));
 
         jLabel18.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         jLabel18.setText("Cédula de cuidadanía:");
-        ConsultarCliente.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 360, -1, -1));
+        ConsultarCliente.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 500, -1, -1));
 
         jLabel19.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         jLabel19.setText("Número de teléfono móvil:");
-        ConsultarCliente.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 520, -1, -1));
+        ConsultarCliente.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 620, -1, -1));
 
         jLabel20.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         jLabel20.setText("Dirección de domicilio:");
-        ConsultarCliente.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 440, -1, -1));
+        ConsultarCliente.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 560, -1, -1));
 
         jLabel21.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         jLabel21.setText("Correo Electrónico:");
-        ConsultarCliente.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 600, -1, -1));
+        ConsultarCliente.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 680, -1, -1));
 
         jLabel22.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         jLabel22.setText("Consultar un Cliente");
-        ConsultarCliente.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 30, -1, -1));
+        ConsultarCliente.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 30, -1, -1));
 
         rcorreo2.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        ConsultarCliente.add(rcorreo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 600, 450, -1));
+        ConsultarCliente.add(rcorreo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 680, 450, -1));
 
         Rnombre2.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        ConsultarCliente.add(Rnombre2, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 200, 450, -1));
+        ConsultarCliente.add(Rnombre2, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 380, 450, -1));
 
         Rapellido2.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        ConsultarCliente.add(Rapellido2, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 280, 450, -1));
+        ConsultarCliente.add(Rapellido2, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 440, 450, -1));
 
         rdirecc2.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        ConsultarCliente.add(rdirecc2, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 440, 450, -1));
+        ConsultarCliente.add(rdirecc2, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 560, 450, -1));
 
-        jButton4.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jButton4.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jButton4.setText("Cancelar");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
             }
         });
-        ConsultarCliente.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 690, -1, -1));
+        ConsultarCliente.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 120, 130, -1));
 
         try {
             rcelular2.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##########")));
@@ -334,7 +335,7 @@ public class menuPrincipal extends javax.swing.JFrame {
             ex.printStackTrace();
         }
         rcelular2.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        ConsultarCliente.add(rcelular2, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 520, 450, -1));
+        ConsultarCliente.add(rcelular2, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 620, 450, -1));
 
         try {
             rcedula2.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##########")));
@@ -342,7 +343,7 @@ public class menuPrincipal extends javax.swing.JFrame {
             ex.printStackTrace();
         }
         rcedula2.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        ConsultarCliente.add(rcedula2, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 360, 450, -1));
+        ConsultarCliente.add(rcedula2, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 500, 450, -1));
 
         consultaCliente.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         consultaCliente.addActionListener(new java.awt.event.ActionListener() {
@@ -350,7 +351,7 @@ public class menuPrincipal extends javax.swing.JFrame {
                 consultaClienteActionPerformed(evt);
             }
         });
-        ConsultarCliente.add(consultaCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 120, 300, -1));
+        ConsultarCliente.add(consultaCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 120, 300, -1));
 
         bConsultarCliente.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         bConsultarCliente.setText("Consultar");
@@ -359,7 +360,19 @@ public class menuPrincipal extends javax.swing.JFrame {
                 bConsultarClienteActionPerformed(evt);
             }
         });
-        ConsultarCliente.add(bConsultarCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 120, -1, -1));
+        ConsultarCliente.add(bConsultarCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 120, -1, -1));
+
+        jTableConsultaCliente.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+
+            }
+        ));
+        jScrollPane2.setViewportView(jTableConsultaCliente);
+
+        ConsultarCliente.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 180, 1010, 190));
 
         menu.setAlignmentX(20.0F);
         menu.setAlignmentY(20.0F);
@@ -633,6 +646,8 @@ public class menuPrincipal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    
+    
     private void menuRegistrarClienteComponentAdded(java.awt.event.ContainerEvent evt) {//GEN-FIRST:event_menuRegistrarClienteComponentAdded
         // TODO add your handling code here:
     }//GEN-LAST:event_menuRegistrarClienteComponentAdded
@@ -810,35 +825,44 @@ public class menuPrincipal extends javax.swing.JFrame {
 
     private void bConsultarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bConsultarClienteActionPerformed
         lnCliente objlnCliente = new lnCliente();
+        int i=jTableConsultaCliente.getSelectedRow();
+        int fila=0;
         Cliente ent = new Cliente();
-        String temp="";
-        StringTokenizer st =new StringTokenizer(temp);
-        while(st.hasMoreTokens()){
-            ent.setNombresCliente(st.nextToken());
-            ent.setApellidosCliente(st.nextToken());
-        }
+        ent.setNombresCliente(consultaCliente.getText());
         ArrayList<Cliente> lista= objlnCliente.buscar(ent);
-            for(Cliente c:lista){
-         Rnombre2.setText(c.getNombresCliente());
-         Rapellido2.setText(c.getApellidosCliente());
-         rcedula2.setText(c.getCedulaRucCliente());
-         rdirecc2.setText(c.getDireccionCliente());
-         rcelular2.setText(c.getTelefonoCliente());
-         rcorreo2.setText(c.getEmailCliente());            
+        System.out.println(lista); 
+        
+        DefaultTableModel modelo = new DefaultTableModel();
+        modelo.addColumn("IdCargo");
+        modelo.addColumn("Nombre");
+        modelo.addColumn("Apellido");
+        modelo.addColumn("Cedula Ruc");
+        modelo.addColumn("Dirección");
+        modelo.addColumn("Teléfono");
+        modelo.addColumn("Email");
+        modelo.setRowCount(lista.size());
+               
+        for(Cliente c: lista){
+        modelo.setValueAt(c.getIdCliente(), fila, 0);
+        modelo.setValueAt(c.getNombresCliente(), fila, 1);
+        modelo.setValueAt(c.getApellidosCliente(), fila, 2);
+        modelo.setValueAt(c.getCedulaRucCliente(), fila, 3);
+        modelo.setValueAt(c.getDireccionCliente(), fila, 4);
+        modelo.setValueAt(c.getTelefonoCliente(), fila, 5);
+        modelo.setValueAt(c.getEmailCliente(), fila, 6);
+        fila++;
         }
-            System.out.println(lista); 
+        jTableConsultaCliente.setModel(modelo);
         
-         
-         
-        
-        // Iterator iter = lista.iterator();
-        // while(iter.hasNext()){
-         //     Rnombre2.setText();
-        // }
-         
+        Rnombre2.setText(jTableConsultaCliente.getValueAt(i, 0).toString());
+        Rapellido2.setText(jTableConsultaCliente.getValueAt(i, 1).toString());
+        rcedula2.setText(jTableConsultaCliente.getValueAt(i, 2).toString());
+        rdirecc2.setText(jTableConsultaCliente.getValueAt(i, 3).toString());
+        rcelular2.setText(jTableConsultaCliente.getValueAt(i, 4).toString());
+        rcorreo2.setText(jTableConsultaCliente.getValueAt(i, 5).toString());
         
     }//GEN-LAST:event_bConsultarClienteActionPerformed
-
+       
     private void consultaClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_consultaClienteActionPerformed
         
     }//GEN-LAST:event_consultaClienteActionPerformed
@@ -945,6 +969,8 @@ public class menuPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuItem jMenuItem10;
     private javax.swing.JMenuItem jMenuItem9;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTable jTableConsultaCliente;
     private javax.swing.JPanel logoprincipal;
     private javax.swing.JMenuBar menu;
     private javax.swing.JMenuItem menuRegistrarCliente;
