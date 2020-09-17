@@ -1,6 +1,11 @@
 package vistas;
+import entidades.Cliente;
 import java.awt.Color;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.StringTokenizer;
 import javax.swing.JOptionPane;
+import logicaNegocio.lnCliente;
 public class menuPrincipal extends javax.swing.JFrame {
     public menuPrincipal() {
          initComponents();
@@ -66,13 +71,13 @@ public class menuPrincipal extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         rcelular2 = new javax.swing.JFormattedTextField();
         rcedula2 = new javax.swing.JFormattedTextField();
-        consulta1 = new javax.swing.JTextField();
-        jButton6 = new javax.swing.JButton();
+        consultaCliente = new javax.swing.JTextField();
+        bConsultarCliente = new javax.swing.JButton();
         menu = new javax.swing.JMenuBar();
         Clientes = new javax.swing.JMenu();
         menuRegistrarCliente = new javax.swing.JMenuItem();
         actualizarCliente = new javax.swing.JMenuItem();
-        consultar = new javax.swing.JMenuItem();
+        consultarCliente = new javax.swing.JMenuItem();
         Eventos = new javax.swing.JMenu();
         RegistrarEvento = new javax.swing.JMenu();
         reservacion = new javax.swing.JMenuItem();
@@ -280,11 +285,11 @@ public class menuPrincipal extends javax.swing.JFrame {
 
         jLabel17.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         jLabel17.setText("Apellido:");
-        ConsultarCliente.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 270, -1, -1));
+        ConsultarCliente.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 280, -1, -1));
 
         jLabel18.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         jLabel18.setText("Cédula de cuidadanía:");
-        ConsultarCliente.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 350, -1, -1));
+        ConsultarCliente.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 360, -1, -1));
 
         jLabel19.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         jLabel19.setText("Número de teléfono móvil:");
@@ -339,17 +344,22 @@ public class menuPrincipal extends javax.swing.JFrame {
         rcedula2.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         ConsultarCliente.add(rcedula2, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 360, 450, -1));
 
-        consulta1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        ConsultarCliente.add(consulta1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 120, 300, -1));
-
-        jButton6.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jButton6.setText("Consultar");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        consultaCliente.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        consultaCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                consultaClienteActionPerformed(evt);
             }
         });
-        ConsultarCliente.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 120, -1, -1));
+        ConsultarCliente.add(consultaCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 120, 300, -1));
+
+        bConsultarCliente.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        bConsultarCliente.setText("Consultar");
+        bConsultarCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bConsultarClienteActionPerformed(evt);
+            }
+        });
+        ConsultarCliente.add(bConsultarCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 120, -1, -1));
 
         menu.setAlignmentX(20.0F);
         menu.setAlignmentY(20.0F);
@@ -390,15 +400,15 @@ public class menuPrincipal extends javax.swing.JFrame {
         });
         Clientes.add(actualizarCliente);
 
-        consultar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        consultar.setText("Consultar Cliente");
-        consultar.setPreferredSize(new java.awt.Dimension(285, 32));
-        consultar.addActionListener(new java.awt.event.ActionListener() {
+        consultarCliente.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        consultarCliente.setText("Consultar Cliente");
+        consultarCliente.setPreferredSize(new java.awt.Dimension(285, 32));
+        consultarCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                consultarActionPerformed(evt);
+                consultarClienteActionPerformed(evt);
             }
         });
-        Clientes.add(consultar);
+        Clientes.add(consultarCliente);
 
         menu.add(Clientes);
 
@@ -669,7 +679,7 @@ public class menuPrincipal extends javax.swing.JFrame {
 
     }//GEN-LAST:event_actualizarClienteActionPerformed
 
-    private void consultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_consultarActionPerformed
+    private void consultarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_consultarClienteActionPerformed
         Rnombre2.setText("");
         Rapellido2.setText("");
         rcedula2.setText("");
@@ -687,7 +697,7 @@ public class menuPrincipal extends javax.swing.JFrame {
         ActualizarCliente.setVisible(false);
         ConsultarCliente.setVisible(true);
         
-    }//GEN-LAST:event_consultarActionPerformed
+    }//GEN-LAST:event_consultarClienteActionPerformed
 
     private void jMenu1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu1MouseClicked
         if(JOptionPane.showConfirmDialog(null,"¿Seguro desea salir?", "SALIR", JOptionPane.YES_NO_OPTION)==0){
@@ -787,7 +797,7 @@ public class menuPrincipal extends javax.swing.JFrame {
             logoprincipal.setVisible(true);
             ActualizarCliente.setVisible(false);
             ConsultarCliente.setVisible(false);
-            consulta1.setText("");
+            consultaCliente.setText("");
             Rnombre2.setText("");
             Rapellido2.setText("");
             rcedula2.setText("");
@@ -798,9 +808,40 @@ public class menuPrincipal extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton4ActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-       
-    }//GEN-LAST:event_jButton6ActionPerformed
+    private void bConsultarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bConsultarClienteActionPerformed
+        lnCliente objlnCliente = new lnCliente();
+        Cliente ent = new Cliente();
+        String temp="";
+        StringTokenizer st =new StringTokenizer(temp);
+        while(st.hasMoreTokens()){
+            ent.setNombresCliente(st.nextToken());
+            ent.setApellidosCliente(st.nextToken());
+        }
+        ArrayList<Cliente> lista= objlnCliente.buscar(ent);
+            for(Cliente c:lista){
+         Rnombre2.setText(c.getNombresCliente());
+         Rapellido2.setText(c.getApellidosCliente());
+         rcedula2.setText(c.getCedulaRucCliente());
+         rdirecc2.setText(c.getDireccionCliente());
+         rcelular2.setText(c.getTelefonoCliente());
+         rcorreo2.setText(c.getEmailCliente());            
+        }
+            System.out.println(lista); 
+        
+         
+         
+        
+        // Iterator iter = lista.iterator();
+        // while(iter.hasNext()){
+         //     Rnombre2.setText();
+        // }
+         
+        
+    }//GEN-LAST:event_bConsultarClienteActionPerformed
+
+    private void consultaClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_consultaClienteActionPerformed
+        
+    }//GEN-LAST:event_consultaClienteActionPerformed
 
     /**
      * @param args the command line arguments
@@ -870,15 +911,15 @@ public class menuPrincipal extends javax.swing.JFrame {
     private javax.swing.JTextField Rnombre1;
     private javax.swing.JTextField Rnombre2;
     private javax.swing.JMenuItem actualizarCliente;
+    private javax.swing.JButton bConsultarCliente;
     private javax.swing.JTextField consulta;
-    private javax.swing.JTextField consulta1;
-    private javax.swing.JMenuItem consultar;
+    private javax.swing.JTextField consultaCliente;
+    private javax.swing.JMenuItem consultarCliente;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

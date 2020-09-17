@@ -48,10 +48,7 @@ public class UsuarioDAO implements iOperaciones <Usuario>{
         }catch(Exception ex){
             JOptionPane.showMessageDialog(null, "no se pudo establecer la conexion" + ex.getMessage(),"Error de conexión",JOptionPane.ERROR_MESSAGE);
         }
-          for(int i =0; i<lista.size();i++){
-         System.out.println(lista.get(i));
-         }
-        return existe;
+    return existe;
     }
     @Override
     public Boolean eliminar(Usuario ent) {
