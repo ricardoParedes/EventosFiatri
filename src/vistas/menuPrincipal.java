@@ -45,16 +45,20 @@ public class menuPrincipal extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
+        RidCliente1 = new javax.swing.JTextField();
         rcorreo1 = new javax.swing.JTextField();
         Rnombre1 = new javax.swing.JTextField();
         Rapellido1 = new javax.swing.JTextField();
         rdirecc1 = new javax.swing.JTextField();
         jButton3 = new javax.swing.JButton();
-        Acutalizar = new javax.swing.JButton();
+        bAcutalizarCliente = new javax.swing.JButton();
         rcelular1 = new javax.swing.JFormattedTextField();
         rcedula1 = new javax.swing.JFormattedTextField();
         consulta = new javax.swing.JTextField();
-        jButton5 = new javax.swing.JButton();
+        conActualizarCliente = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTableActualizarCliente = new javax.swing.JTable();
+        jLabel23 = new javax.swing.JLabel();
         ConsultarCliente = new javax.swing.JPanel();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
@@ -192,44 +196,47 @@ public class menuPrincipal extends javax.swing.JFrame {
         ActualizarCliente.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        jLabel9.setText("Nombre:");
-        ActualizarCliente.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 200, -1, -1));
+        jLabel9.setText("IdCliente:");
+        ActualizarCliente.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 220, -1, -1));
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         jLabel10.setText("Apellido:");
-        ActualizarCliente.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 270, -1, -1));
+        ActualizarCliente.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 340, -1, -1));
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         jLabel11.setText("Cédula de cuidadanía:");
-        ActualizarCliente.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 350, -1, -1));
+        ActualizarCliente.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 410, -1, -1));
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         jLabel12.setText("Número de teléfono móvil:");
-        ActualizarCliente.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 520, -1, -1));
+        ActualizarCliente.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 550, -1, -1));
 
         jLabel13.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         jLabel13.setText("Dirección de domicilio:");
-        ActualizarCliente.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 440, -1, -1));
+        ActualizarCliente.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 480, -1, -1));
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         jLabel14.setText("Correo Electrónico:");
-        ActualizarCliente.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 600, -1, -1));
+        ActualizarCliente.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 620, -1, -1));
 
         jLabel15.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         jLabel15.setText("Actualizar un Cliente");
         ActualizarCliente.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 30, -1, -1));
 
-        rcorreo1.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        ActualizarCliente.add(rcorreo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 600, 450, -1));
+        RidCliente1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        ActualizarCliente.add(RidCliente1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 220, 130, 50));
 
-        Rnombre1.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        ActualizarCliente.add(Rnombre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 200, 450, -1));
+        rcorreo1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        ActualizarCliente.add(rcorreo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 620, 450, 50));
 
-        Rapellido1.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        ActualizarCliente.add(Rapellido1, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 280, 450, -1));
+        Rnombre1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        ActualizarCliente.add(Rnombre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 270, 450, 50));
 
-        rdirecc1.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        ActualizarCliente.add(rdirecc1, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 440, 450, -1));
+        Rapellido1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        ActualizarCliente.add(Rapellido1, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 340, 450, 50));
+
+        rdirecc1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        ActualizarCliente.add(rdirecc1, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 480, 450, 50));
 
         jButton3.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         jButton3.setText("Cancelar");
@@ -240,43 +247,64 @@ public class menuPrincipal extends javax.swing.JFrame {
         });
         ActualizarCliente.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 690, -1, -1));
 
-        Acutalizar.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        Acutalizar.setText("Actualizar");
-        Acutalizar.setEnabled(false);
-        Acutalizar.addActionListener(new java.awt.event.ActionListener() {
+        bAcutalizarCliente.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        bAcutalizarCliente.setText("Actualizar");
+        bAcutalizarCliente.setEnabled(false);
+        bAcutalizarCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AcutalizarActionPerformed(evt);
+                bAcutalizarClienteActionPerformed(evt);
             }
         });
-        ActualizarCliente.add(Acutalizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 690, -1, -1));
+        ActualizarCliente.add(bAcutalizarCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 690, -1, -1));
 
         try {
             rcelular1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##########")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        rcelular1.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        ActualizarCliente.add(rcelular1, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 520, 450, -1));
+        rcelular1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        ActualizarCliente.add(rcelular1, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 550, 450, 50));
 
         try {
             rcedula1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##########")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        rcedula1.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        ActualizarCliente.add(rcedula1, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 360, 450, -1));
+        rcedula1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        ActualizarCliente.add(rcedula1, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 410, 450, 50));
 
         consulta.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        ActualizarCliente.add(consulta, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 120, 300, -1));
+        ActualizarCliente.add(consulta, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 120, 300, -1));
 
-        jButton5.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jButton5.setText("Consultar");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        conActualizarCliente.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        conActualizarCliente.setText("Consultar");
+        conActualizarCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                conActualizarClienteActionPerformed(evt);
             }
         });
-        ActualizarCliente.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 120, -1, -1));
+        ActualizarCliente.add(conActualizarCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 120, -1, -1));
+
+        jTableActualizarCliente.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+
+            }
+        ));
+        jTableActualizarCliente.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jTableActualizarClienteMousePressed(evt);
+            }
+        });
+        jScrollPane1.setViewportView(jTableActualizarCliente);
+
+        ActualizarCliente.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 100, 700, 150));
+
+        jLabel23.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabel23.setText("Nombre:");
+        ActualizarCliente.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 280, -1, -1));
 
         ConsultarCliente.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -391,7 +419,7 @@ public class menuPrincipal extends javax.swing.JFrame {
         Clientes.setFont(Clientes.getFont().deriveFont((float)48));
         Clientes.setMaximumSize(new java.awt.Dimension(288, 32767));
         Clientes.setMinimumSize(new java.awt.Dimension(100, 60));
-        Clientes.setPreferredSize(new java.awt.Dimension(288, 60));
+        Clientes.setPreferredSize(new java.awt.Dimension(210, 60));
 
         menuRegistrarCliente.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         menuRegistrarCliente.setText("Registrar Cliente");
@@ -433,7 +461,7 @@ public class menuPrincipal extends javax.swing.JFrame {
         Eventos.setText("Eventos");
         Eventos.setFont(Eventos.getFont().deriveFont((float)48));
         Eventos.setMaximumSize(new java.awt.Dimension(288, 32767));
-        Eventos.setPreferredSize(new java.awt.Dimension(285, 60));
+        Eventos.setPreferredSize(new java.awt.Dimension(260, 60));
 
         RegistrarEvento.setText("Registrar");
         RegistrarEvento.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -488,7 +516,7 @@ public class menuPrincipal extends javax.swing.JFrame {
         Menu.setText("Menú");
         Menu.setFont(Menu.getFont().deriveFont((float)48));
         Menu.setMaximumSize(new java.awt.Dimension(288, 32767));
-        Menu.setPreferredSize(new java.awt.Dimension(288, 60));
+        Menu.setPreferredSize(new java.awt.Dimension(190, 60));
 
         RegistrarMenu.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         RegistrarMenu.setText("Registrar Menu");
@@ -512,7 +540,7 @@ public class menuPrincipal extends javax.swing.JFrame {
         Nomina.setText("Nómina");
         Nomina.setFont(Nomina.getFont().deriveFont((float)48));
         Nomina.setMaximumSize(new java.awt.Dimension(288, 32767));
-        Nomina.setPreferredSize(new java.awt.Dimension(288, 60));
+        Nomina.setPreferredSize(new java.awt.Dimension(240, 60));
 
         RegistrarTrabajador.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         RegistrarTrabajador.setText("Registrar Trabajador");
@@ -536,7 +564,7 @@ public class menuPrincipal extends javax.swing.JFrame {
         PagosTrabajadores.setText("Pagos");
         PagosTrabajadores.setFont(PagosTrabajadores.getFont().deriveFont((float)48));
         PagosTrabajadores.setMaximumSize(new java.awt.Dimension(288, 32767));
-        PagosTrabajadores.setPreferredSize(new java.awt.Dimension(288, 60));
+        PagosTrabajadores.setPreferredSize(new java.awt.Dimension(210, 60));
 
         RegistrarPago.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         RegistrarPago.setText("Registrar Pago");
@@ -577,12 +605,12 @@ public class menuPrincipal extends javax.swing.JFrame {
         Reportes.setText("Reportes");
         Reportes.setFont(Reportes.getFont().deriveFont((float)48));
         Reportes.setMaximumSize(new java.awt.Dimension(288, 32767));
-        Reportes.setPreferredSize(new java.awt.Dimension(288, 60));
+        Reportes.setPreferredSize(new java.awt.Dimension(260, 60));
         menu.add(Reportes);
 
         jMenu1.setText("Salir");
         jMenu1.setFont(jMenu1.getFont().deriveFont((float)48));
-        jMenu1.setPreferredSize(new java.awt.Dimension(250, 60));
+        jMenu1.setPreferredSize(new java.awt.Dimension(210, 60));
         jMenu1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jMenu1MouseClicked(evt);
@@ -614,9 +642,9 @@ public class menuPrincipal extends javax.swing.JFrame {
                     .addGap(0, 0, Short.MAX_VALUE)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 130, Short.MAX_VALUE)
+                    .addGap(0, 110, Short.MAX_VALUE)
                     .addComponent(ActualizarCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 130, Short.MAX_VALUE)))
+                    .addGap(0, 110, Short.MAX_VALUE)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 130, Short.MAX_VALUE)
@@ -681,6 +709,7 @@ public class menuPrincipal extends javax.swing.JFrame {
         ActualizarCliente.setVisible(true);
         RegistroCliente.setVisible(false);
         logoprincipal.setVisible(false);
+        RidCliente1.setEditable(false);
         Rnombre1.setEditable(false);
         Rapellido1.setEditable(false);
         rcedula1.setEditable(false);
@@ -695,7 +724,7 @@ public class menuPrincipal extends javax.swing.JFrame {
         rdirecc1.setText("");
         rcorreo1.setText("");
         rcelular1.setText("");
-        Acutalizar.setEnabled(false);
+        bAcutalizarCliente.setEnabled(false);
 
     }//GEN-LAST:event_actualizarClienteActionPerformed
 
@@ -812,13 +841,63 @@ public class menuPrincipal extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void AcutalizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AcutalizarActionPerformed
-      
-    }//GEN-LAST:event_AcutalizarActionPerformed
+    private void bAcutalizarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAcutalizarClienteActionPerformed
+        
+       int res=JOptionPane.showConfirmDialog(null, "¿Seguro deseas Actualizar?");
+        if(res==JOptionPane.YES_OPTION){
+            lnCliente objlnCliente = new lnCliente();
+            Cliente ent = new Cliente();
+            ent.setIdCliente(Integer.parseInt(RidCliente1.getText()));
+            ent.setNombresCliente(Rnombre1.getText());
+            ent.setApellidosCliente(Rapellido1.getText());
+            ent.setCedulaRucCliente(rcedula1.getText());
+            ent.setDireccionCliente(rdirecc1.getText());
+            ent.setTelefonoCliente(rcelular1.getText());
+            ent.setEmailCliente(rcorreo1.getText());
+            if(objlnCliente.modificar(ent)==true){
+                JOptionPane.showMessageDialog(null,"Actualizacion Correcta");
+            }else{
+                    JOptionPane.showMessageDialog(null,"No se pudo Actualizar");
+            }
+        }
+    }//GEN-LAST:event_bAcutalizarClienteActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-       
-    }//GEN-LAST:event_jButton5ActionPerformed
+    private void conActualizarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_conActualizarClienteActionPerformed
+        lnCliente objlnCliente = new lnCliente();
+        int fila=0;
+        Cliente ent = new Cliente();
+        ent.setNombresCliente(consulta.getText());
+        ArrayList<Cliente> lista= objlnCliente.buscar(ent);
+        
+        DefaultTableModel modelo = new DefaultTableModel();
+        modelo.addColumn("IdCargo");
+        modelo.addColumn("Nombre");
+        modelo.addColumn("Apellido");
+        modelo.addColumn("Cedula Ruc");
+        modelo.addColumn("Dirección");
+        modelo.addColumn("Teléfono");
+        modelo.addColumn("Email");
+        modelo.setRowCount(lista.size());
+               
+        for(Cliente c: lista){
+        modelo.setValueAt(c.getIdCliente(), fila, 0);
+        modelo.setValueAt(c.getNombresCliente(), fila, 1);
+        modelo.setValueAt(c.getApellidosCliente(), fila, 2);
+        modelo.setValueAt(c.getCedulaRucCliente(), fila, 3);
+        modelo.setValueAt(c.getDireccionCliente(), fila, 4);
+        modelo.setValueAt(c.getTelefonoCliente(), fila, 5);
+        modelo.setValueAt(c.getEmailCliente(), fila, 6);
+        fila++;
+        }
+        jTableActualizarCliente.setModel(modelo);
+        //RidCliente1.setEditable(true);
+        Rnombre1.setEditable(true);
+        Rapellido1.setEditable(true);
+        rcedula1.setEditable(true);
+        rdirecc1.setEditable(true);
+        rcelular1.setEditable(true);
+        rcorreo1.setEditable(true);
+    }//GEN-LAST:event_conActualizarClienteActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         if(JOptionPane.showConfirmDialog(null,"¿Seguro desea salir de la búsqueda?", "SALIR DE LA CONSULTA", JOptionPane.YES_NO_OPTION)==0){
@@ -843,7 +922,6 @@ public class menuPrincipal extends javax.swing.JFrame {
         Cliente ent = new Cliente();
         ent.setNombresCliente(consultaCliente.getText());
         ArrayList<Cliente> lista= objlnCliente.buscar(ent);
-        System.out.println(lista); 
         
         DefaultTableModel modelo = new DefaultTableModel();
         modelo.addColumn("IdCargo");
@@ -886,6 +964,18 @@ public class menuPrincipal extends javax.swing.JFrame {
           // TODO add your handling code here:
     }//GEN-LAST:event_jTableConsultaClienteMousePressed
 
+    private void jTableActualizarClienteMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableActualizarClienteMousePressed
+        int i=jTableActualizarCliente.getSelectedRow();
+        RidCliente1.setText(jTableActualizarCliente.getValueAt(i, 0).toString());
+        Rnombre1.setText(jTableActualizarCliente.getValueAt(i, 1).toString());
+        Rapellido1.setText(jTableActualizarCliente.getValueAt(i, 2).toString());
+        rcedula1.setText(jTableActualizarCliente.getValueAt(i, 3).toString());
+        rdirecc1.setText(jTableActualizarCliente.getValueAt(i, 4).toString());
+        rcelular1.setText(jTableActualizarCliente.getValueAt(i, 5).toString());
+        rcorreo1.setText(jTableActualizarCliente.getValueAt(i, 6).toString());
+        bAcutalizarCliente.setEnabled(true);
+    }//GEN-LAST:event_jTableActualizarClienteMousePressed
+
     /**
      * @param args the command line arguments
      */
@@ -927,7 +1017,6 @@ public class menuPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem ActualizarMenu;
     private javax.swing.JMenuItem ActualizarPago;
     private javax.swing.JMenuItem ActualizarTrabajador;
-    private javax.swing.JButton Acutalizar;
     private javax.swing.JMenu Clientes;
     private javax.swing.JPanel ConsultarCliente;
     private javax.swing.JMenu ConsultarEvento;
@@ -950,11 +1039,14 @@ public class menuPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem RegistrarTrabajador;
     private javax.swing.JPanel RegistroCliente;
     private javax.swing.JMenu Reportes;
+    private javax.swing.JTextField RidCliente1;
     private javax.swing.JTextField Rnombre;
     private javax.swing.JTextField Rnombre1;
     private javax.swing.JTextField Rnombre2;
     private javax.swing.JMenuItem actualizarCliente;
+    private javax.swing.JButton bAcutalizarCliente;
     private javax.swing.JButton bConsultarCliente;
+    private javax.swing.JButton conActualizarCliente;
     private javax.swing.JTextField consulta;
     private javax.swing.JTextField consultaCliente;
     private javax.swing.JMenuItem consultarCliente;
@@ -962,7 +1054,6 @@ public class menuPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -978,6 +1069,7 @@ public class menuPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -988,7 +1080,9 @@ public class menuPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuItem jMenuItem10;
     private javax.swing.JMenuItem jMenuItem9;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTable jTableActualizarCliente;
     private javax.swing.JTable jTableConsultaCliente;
     private javax.swing.JPanel logoprincipal;
     private javax.swing.JMenuBar menu;

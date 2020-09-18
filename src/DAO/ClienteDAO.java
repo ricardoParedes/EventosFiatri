@@ -41,7 +41,28 @@ public class ClienteDAO implements iOperaciones <Cliente> {
 
     @Override
     public Boolean modificar(Cliente ent) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Boolean exito=false;
+        try{
+            Connection cn = new ConexionDAO().getConnection();
+            String procedimientoAlmacenado= "{call sp_actualizarCliente(?,?,?,?,?,?,?)}"; 
+            CallableStatement call= cn.prepareCall(procedimientoAlmacenado);
+            call.setInt("idCliente",ent.getIdCliente());
+            call.setString("nombre", ent.getNombresCliente());
+            call.setString("apellido", ent.getApellidosCliente());
+            call.setString("cedula", ent.getCedulaRucCliente());
+            call.setString("direccion", ent.getCedulaRucCliente());
+            call.setString("telefono", ent.getTelefonoCliente());
+            call.setString("email", ent.getEmailCliente());
+            int ejecucion= call.executeUpdate();
+            if(ejecucion>0){
+                exito=true;
+            }
+                             
+            cn.close();
+        }catch(Exception ex){
+            JOptionPane.showMessageDialog(null, "no se pudo establecer la conexion" + ex.getMessage(),"Error de conexión",JOptionPane.ERROR_MESSAGE);
+        }
+    return exito;
     }
 
     @Override
