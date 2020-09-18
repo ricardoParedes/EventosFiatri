@@ -23,7 +23,7 @@ public class lnCliente implements iOperaciones<Cliente>{
 
     @Override
     public Boolean registrar(Cliente ent) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return new ClienteDAO().registrar(ent);
     }
 
     @Override

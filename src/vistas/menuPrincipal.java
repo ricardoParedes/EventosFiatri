@@ -783,7 +783,16 @@ public class menuPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-       
+        Cliente ent = new Cliente();
+        ent.setNombresCliente(Rnombre.getText());
+        ent.setApellidosCliente(Rapellido.getText());
+        ent.setCedulaRucCliente(rcedula.getText());
+        ent.setDireccionCliente(rdirecc.getText());
+        ent.setTelefonoCliente(rcelular.getText());
+        ent.setEmailCliente(rcorreo.getText());
+        lnCliente objlnCliente= new lnCliente();
+        objlnCliente.registrar(ent);
+        JOptionPane.showMessageDialog(null, "Registro Exitoso");
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed

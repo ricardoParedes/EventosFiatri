@@ -18,7 +18,25 @@ public class ClienteDAO implements iOperaciones <Cliente> {
 
     @Override
     public Boolean registrar(Cliente ent) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Boolean exito=false;
+        try{
+            Connection cn = new ConexionDAO().getConnection();
+        String procedimientoAlmacenado= "{call sp_registrarCliente(?,?,?,?,?,?)}"; 
+        CallableStatement call= cn.prepareCall(procedimientoAlmacenado);
+        call.setString("nombre", ent.getNombresCliente());
+        call.setString("apellido", ent.getApellidosCliente());
+        call.setString("cedula", ent.getCedulaRucCliente());
+        call.setString("direccion", ent.getCedulaRucCliente());
+        call.setString("telefono", ent.getTelefonoCliente());
+        call.setString("email", ent.getEmailCliente());
+        exito=true;
+        call.executeQuery();
+        cn.close();
+        }catch(Exception ex){
+            //JOptionPane.showMessageDialog(null, "no se pudo establecer la conexion" + ex.getMessage(),"Error de conexión",JOptionPane.ERROR_MESSAGE);
+        }
+    return exito;
+        
     }
 
     @Override
@@ -51,6 +69,7 @@ public class ClienteDAO implements iOperaciones <Cliente> {
                 objCliente.setEmailCliente(rs.getString("EMAILCLIENTE"));
                 lista.add(objCliente);
             }
+            cn.close();
         }catch(Exception ex){
             JOptionPane.showMessageDialog(null, "no se pudo establecer la conexion" + ex.getMessage(),"Error de conexión",JOptionPane.ERROR_MESSAGE);
         }
