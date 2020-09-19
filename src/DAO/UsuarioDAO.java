@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package DAO;
 
 import entidades.Usuario;
@@ -21,10 +17,6 @@ public class UsuarioDAO implements iOperaciones <Usuario>{
         boolean existe= false;
         try{
            Connection cn = new ConexionDAO().getConnection();
-           //String sentenciaSQL= "SELECT * FROM USUARIO WHERE USUARIOUSUARIO = '"+ent.getUsuarioUsuario()+"' AND CONTRASENAUSUARIO = '"+ent.getContrasenaUsuario()+"'";
-           //String sentenciaSQL= "SELECT * FROM USUARIO WHERE USUARIOUSUARIO = 'andresP19' AND CONTRASENAUSUARIO = 'ap19'";
-            //PreparedStatement ps= cn.prepareStatement(sentenciaSQL);
-            //ResultSet rs=ps.executeQuery();
            String procedimientoAlmacenado= "{call sp_accesoSistema(?,?,?)}"; 
            CallableStatement call= cn.prepareCall(procedimientoAlmacenado);
            call.setString("usuario", ent.getUsuarioUsuario());

@@ -14,6 +14,13 @@ public class menuPrincipal extends javax.swing.JFrame {
         logoprincipal.setVisible(true);
         ActualizarCliente.setVisible(false);
         ConsultarCliente.setVisible(false);
+        RegistroMenuEvento.setVisible(false);
+        ActualizarCliente.setVisible(false);
+        ConsultarCliente.setVisible(false);
+        RegistroCliente.setVisible(false);
+        ActualizarMenu.setVisible(false);
+        ConsultarMenu.setVisible(false);
+            
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -33,7 +40,7 @@ public class menuPrincipal extends javax.swing.JFrame {
         Rnombre = new javax.swing.JTextField();
         Rapellido = new javax.swing.JTextField();
         rdirecc = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        jButtonCancalerRCliente = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         rcelular = new javax.swing.JFormattedTextField();
         rcedula = new javax.swing.JFormattedTextField();
@@ -78,6 +85,63 @@ public class menuPrincipal extends javax.swing.JFrame {
         bConsultarCliente = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTableConsultaCliente = new javax.swing.JTable();
+        RegistroMenuEvento = new javax.swing.JPanel();
+        jLabel31 = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
+        jLabel33 = new javax.swing.JLabel();
+        jLabel34 = new javax.swing.JLabel();
+        jLabel35 = new javax.swing.JLabel();
+        jLabel36 = new javax.swing.JLabel();
+        jLabel37 = new javax.swing.JLabel();
+        RnombreMenu = new javax.swing.JTextField();
+        jButtonCancelarMenu = new javax.swing.JButton();
+        jButtonRegistroMenu = new javax.swing.JButton();
+        jComboBoxPostre = new javax.swing.JComboBox<>();
+        jComboBoxTiemposMenu = new javax.swing.JComboBox<>();
+        jComboBoxEntrada = new javax.swing.JComboBox<>();
+        jComboBoxSorbete = new javax.swing.JComboBox<>();
+        jComboBoxPlatoFuerte = new javax.swing.JComboBox<>();
+        ActualizarMenuEvento = new javax.swing.JPanel();
+        jLabel38 = new javax.swing.JLabel();
+        jLabel39 = new javax.swing.JLabel();
+        jLabel40 = new javax.swing.JLabel();
+        jLabel41 = new javax.swing.JLabel();
+        jLabel42 = new javax.swing.JLabel();
+        jLabel43 = new javax.swing.JLabel();
+        jLabel44 = new javax.swing.JLabel();
+        RidCliente2 = new javax.swing.JTextField();
+        rcorreo5 = new javax.swing.JTextField();
+        Rnombre5 = new javax.swing.JTextField();
+        Rapellido5 = new javax.swing.JTextField();
+        rdirecc5 = new javax.swing.JTextField();
+        jButton8 = new javax.swing.JButton();
+        bAcutalizarCliente1 = new javax.swing.JButton();
+        rcelular5 = new javax.swing.JFormattedTextField();
+        rcedula5 = new javax.swing.JFormattedTextField();
+        consulta1 = new javax.swing.JTextField();
+        conActualizarCliente1 = new javax.swing.JButton();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTableActualizarCliente1 = new javax.swing.JTable();
+        jLabel45 = new javax.swing.JLabel();
+        ConsultarMenuEvento = new javax.swing.JPanel();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+        jLabel27 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        jLabel29 = new javax.swing.JLabel();
+        jLabel30 = new javax.swing.JLabel();
+        rcorreo3 = new javax.swing.JTextField();
+        Rnombre3 = new javax.swing.JTextField();
+        Rapellido3 = new javax.swing.JTextField();
+        rdirecc3 = new javax.swing.JTextField();
+        jButton5 = new javax.swing.JButton();
+        rcelular3 = new javax.swing.JFormattedTextField();
+        rcedula3 = new javax.swing.JFormattedTextField();
+        consultaCliente1 = new javax.swing.JTextField();
+        bConsultarCliente1 = new javax.swing.JButton();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTableConsultaCliente1 = new javax.swing.JTable();
         menu = new javax.swing.JMenuBar();
         Clientes = new javax.swing.JMenu();
         menuRegistrarCliente = new javax.swing.JMenuItem();
@@ -159,14 +223,14 @@ public class menuPrincipal extends javax.swing.JFrame {
         rdirecc.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         RegistroCliente.add(rdirecc, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 370, 450, 50));
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        jButton1.setText("Cancelar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jButtonCancalerRCliente.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jButtonCancalerRCliente.setText("Cancelar");
+        jButtonCancalerRCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jButtonCancalerRClienteActionPerformed(evt);
             }
         });
-        RegistroCliente.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 650, -1, -1));
+        RegistroCliente.add(jButtonCancalerRCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 650, -1, -1));
 
         jButton2.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         jButton2.setText("Registrar");
@@ -406,6 +470,291 @@ public class menuPrincipal extends javax.swing.JFrame {
         jScrollPane2.setViewportView(jTableConsultaCliente);
 
         ConsultarCliente.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 180, 1010, 190));
+
+        RegistroMenuEvento.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel31.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabel31.setText("Nombre Menú:");
+        RegistroMenuEvento.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 120, -1, -1));
+
+        jLabel32.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabel32.setText("Tiempos Menú:");
+        RegistroMenuEvento.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 200, -1, -1));
+
+        jLabel33.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabel33.setText("Entrada:");
+        RegistroMenuEvento.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 280, -1, -1));
+
+        jLabel34.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabel34.setText("Plato Fuerte:");
+        RegistroMenuEvento.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 460, -1, -1));
+
+        jLabel35.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabel35.setText("Sorbete:");
+        RegistroMenuEvento.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 370, -1, -1));
+
+        jLabel36.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabel36.setText("Postre:");
+        RegistroMenuEvento.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 550, -1, -1));
+
+        jLabel37.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
+        jLabel37.setText("Registro de Menú");
+        RegistroMenuEvento.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 30, -1, -1));
+
+        RnombreMenu.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        RegistroMenuEvento.add(RnombreMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 120, 450, 50));
+
+        jButtonCancelarMenu.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jButtonCancelarMenu.setText("Cancelar");
+        jButtonCancelarMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCancelarMenuActionPerformed(evt);
+            }
+        });
+        RegistroMenuEvento.add(jButtonCancelarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 650, -1, -1));
+
+        jButtonRegistroMenu.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jButtonRegistroMenu.setText("Registrar");
+        jButtonRegistroMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonRegistroMenuActionPerformed(evt);
+            }
+        });
+        RegistroMenuEvento.add(jButtonRegistroMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 650, -1, -1));
+
+        jComboBoxPostre.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jComboBoxPostre.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione", "Item 2", "Item 3", "Item 4" }));
+        RegistroMenuEvento.add(jComboBoxPostre, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 550, 450, 60));
+
+        jComboBoxTiemposMenu.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jComboBoxTiemposMenu.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione", "Item 2", "Item 3", "Item 4" }));
+        RegistroMenuEvento.add(jComboBoxTiemposMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 200, 450, 60));
+
+        jComboBoxEntrada.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jComboBoxEntrada.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione", "Item 2", "Item 3", "Item 4" }));
+        RegistroMenuEvento.add(jComboBoxEntrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 280, 450, 60));
+
+        jComboBoxSorbete.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jComboBoxSorbete.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione", "Item 2", "Item 3", "Item 4" }));
+        RegistroMenuEvento.add(jComboBoxSorbete, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 370, 450, 60));
+
+        jComboBoxPlatoFuerte.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jComboBoxPlatoFuerte.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione", "Item 2", "Item 3", "Item 4" }));
+        RegistroMenuEvento.add(jComboBoxPlatoFuerte, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 460, 450, 60));
+
+        ActualizarMenuEvento.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel38.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabel38.setText("IdCliente:");
+        ActualizarMenuEvento.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 220, -1, -1));
+
+        jLabel39.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabel39.setText("Apellido:");
+        ActualizarMenuEvento.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 340, -1, -1));
+
+        jLabel40.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabel40.setText("Cédula de cuidadanía:");
+        ActualizarMenuEvento.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 410, -1, -1));
+
+        jLabel41.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabel41.setText("Número de teléfono móvil:");
+        ActualizarMenuEvento.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 550, -1, -1));
+
+        jLabel42.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabel42.setText("Dirección de domicilio:");
+        ActualizarMenuEvento.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 480, -1, -1));
+
+        jLabel43.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabel43.setText("Correo Electrónico:");
+        ActualizarMenuEvento.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 620, -1, -1));
+
+        jLabel44.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
+        jLabel44.setText("Actualizar un Cliente");
+        ActualizarMenuEvento.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 30, -1, -1));
+
+        RidCliente2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        ActualizarMenuEvento.add(RidCliente2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 220, 130, 50));
+
+        rcorreo5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        ActualizarMenuEvento.add(rcorreo5, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 620, 450, 50));
+
+        Rnombre5.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        ActualizarMenuEvento.add(Rnombre5, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 270, 450, 50));
+
+        Rapellido5.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        ActualizarMenuEvento.add(Rapellido5, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 340, 450, 50));
+
+        rdirecc5.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        ActualizarMenuEvento.add(rdirecc5, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 480, 450, 50));
+
+        jButton8.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jButton8.setText("Cancelar");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
+        ActualizarMenuEvento.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 690, -1, -1));
+
+        bAcutalizarCliente1.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        bAcutalizarCliente1.setText("Actualizar");
+        bAcutalizarCliente1.setEnabled(false);
+        bAcutalizarCliente1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bAcutalizarCliente1ActionPerformed(evt);
+            }
+        });
+        ActualizarMenuEvento.add(bAcutalizarCliente1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 690, -1, -1));
+
+        try {
+            rcelular5.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##########")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        rcelular5.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        ActualizarMenuEvento.add(rcelular5, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 550, 450, 50));
+
+        try {
+            rcedula5.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##########")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        rcedula5.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        ActualizarMenuEvento.add(rcedula5, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 410, 450, 50));
+
+        consulta1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        ActualizarMenuEvento.add(consulta1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 120, 300, -1));
+
+        conActualizarCliente1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        conActualizarCliente1.setText("Consultar");
+        conActualizarCliente1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                conActualizarCliente1ActionPerformed(evt);
+            }
+        });
+        ActualizarMenuEvento.add(conActualizarCliente1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 120, -1, -1));
+
+        jTableActualizarCliente1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+
+            }
+        ));
+        jTableActualizarCliente1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jTableActualizarCliente1MousePressed(evt);
+            }
+        });
+        jScrollPane4.setViewportView(jTableActualizarCliente1);
+
+        ActualizarMenuEvento.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 100, 700, 150));
+
+        jLabel45.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabel45.setText("Nombre:");
+        ActualizarMenuEvento.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 280, -1, -1));
+
+        ConsultarMenuEvento.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel24.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabel24.setText("Nombre:");
+        ConsultarMenuEvento.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 380, -1, -1));
+
+        jLabel25.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabel25.setText("Apellido:");
+        ConsultarMenuEvento.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 440, -1, -1));
+
+        jLabel26.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabel26.setText("Cédula de cuidadanía:");
+        ConsultarMenuEvento.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 500, -1, -1));
+
+        jLabel27.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabel27.setText("Número de teléfono móvil:");
+        ConsultarMenuEvento.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 620, -1, -1));
+
+        jLabel28.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabel28.setText("Dirección de domicilio:");
+        ConsultarMenuEvento.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 560, -1, -1));
+
+        jLabel29.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabel29.setText("Correo Electrónico:");
+        ConsultarMenuEvento.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 680, -1, -1));
+
+        jLabel30.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
+        jLabel30.setText("Consultar un Cliente");
+        ConsultarMenuEvento.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 30, -1, -1));
+
+        rcorreo3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        ConsultarMenuEvento.add(rcorreo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 680, 450, 50));
+
+        Rnombre3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        ConsultarMenuEvento.add(Rnombre3, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 380, 450, 50));
+
+        Rapellido3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        ConsultarMenuEvento.add(Rapellido3, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 440, 450, 50));
+
+        rdirecc3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        ConsultarMenuEvento.add(rdirecc3, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 560, 450, 50));
+
+        jButton5.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jButton5.setText("Cancelar");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        ConsultarMenuEvento.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 120, 130, -1));
+
+        try {
+            rcelular3.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##########")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        rcelular3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        ConsultarMenuEvento.add(rcelular3, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 620, 450, 50));
+
+        try {
+            rcedula3.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##########")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        rcedula3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        ConsultarMenuEvento.add(rcedula3, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 500, 450, 50));
+
+        consultaCliente1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        consultaCliente1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                consultaCliente1ActionPerformed(evt);
+            }
+        });
+        ConsultarMenuEvento.add(consultaCliente1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 120, 300, -1));
+
+        bConsultarCliente1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        bConsultarCliente1.setText("Consultar");
+        bConsultarCliente1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bConsultarCliente1ActionPerformed(evt);
+            }
+        });
+        ConsultarMenuEvento.add(bConsultarCliente1, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 120, -1, -1));
+
+        jTableConsultaCliente1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+
+            }
+        ));
+        jTableConsultaCliente1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jTableConsultaCliente1MousePressed(evt);
+            }
+        });
+        jScrollPane3.setViewportView(jTableConsultaCliente1);
+
+        ConsultarMenuEvento.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 180, 1010, 190));
 
         menu.setAlignmentX(20.0F);
         menu.setAlignmentY(20.0F);
@@ -650,6 +999,21 @@ public class menuPrincipal extends javax.swing.JFrame {
                     .addGap(0, 130, Short.MAX_VALUE)
                     .addComponent(ConsultarCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 130, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(ConsultarMenuEvento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(RegistroMenuEvento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addContainerGap(120, Short.MAX_VALUE)
+                    .addComponent(ActualizarMenuEvento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(100, 100, 100)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -674,6 +1038,21 @@ public class menuPrincipal extends javax.swing.JFrame {
                     .addGap(0, 0, Short.MAX_VALUE)
                     .addComponent(ConsultarCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(ConsultarMenuEvento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(RegistroMenuEvento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addContainerGap(68, Short.MAX_VALUE)
+                    .addComponent(ActualizarMenuEvento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(49, 49, 49)))
         );
 
         pack();
@@ -801,15 +1180,21 @@ public class menuPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_ConsultarMenuActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jButtonCancalerRClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCancalerRClienteActionPerformed
         if(JOptionPane.showConfirmDialog(null,"¿Seguro desea abandonar el registro?", "SALIR DEL REGISTRO", JOptionPane.YES_NO_OPTION)==0){
-            RegistroCliente.setVisible(false);
-            logoprincipal.setVisible(true);
-            ActualizarCliente.setVisible(false);
-            ConsultarCliente.setVisible(false);
+                    RegistroCliente.setVisible(false);
+        logoprincipal.setVisible(true);
+        ActualizarCliente.setVisible(false);
+        ConsultarCliente.setVisible(false);
+        RegistroMenuEvento.setVisible(false);
+        ActualizarCliente.setVisible(false);
+        ConsultarCliente.setVisible(false);
+        RegistroCliente.setVisible(false);
+        ActualizarMenu.setVisible(false);
+        ConsultarMenu.setVisible(false);
         }
 
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_jButtonCancalerRClienteActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         Cliente ent = new Cliente();
@@ -826,10 +1211,16 @@ public class menuPrincipal extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         if(JOptionPane.showConfirmDialog(null,"¿Seguro desea abandonar el registro?", "SALIR DEL REGISTRO", JOptionPane.YES_NO_OPTION)==0){
-            RegistroCliente.setVisible(false);
-            logoprincipal.setVisible(true);
-            ActualizarCliente.setVisible(false);
-            ConsultarCliente.setVisible(false);
+        RegistroCliente.setVisible(false);
+        logoprincipal.setVisible(true);
+        ActualizarCliente.setVisible(false);
+        ConsultarCliente.setVisible(false);
+        RegistroMenuEvento.setVisible(false);
+        ActualizarCliente.setVisible(false);
+        ConsultarCliente.setVisible(false);
+        RegistroCliente.setVisible(false);
+        ActualizarMenu.setVisible(false);
+        ConsultarMenu.setVisible(false);
             consulta.setText("");
             Rnombre1.setText("");
             Rapellido1.setText("");
@@ -901,10 +1292,16 @@ public class menuPrincipal extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         if(JOptionPane.showConfirmDialog(null,"¿Seguro desea salir de la búsqueda?", "SALIR DE LA CONSULTA", JOptionPane.YES_NO_OPTION)==0){
-            RegistroCliente.setVisible(false);
-            logoprincipal.setVisible(true);
-            ActualizarCliente.setVisible(false);
-            ConsultarCliente.setVisible(false);
+        RegistroCliente.setVisible(false);
+        logoprincipal.setVisible(true);
+        ActualizarCliente.setVisible(false);
+        ConsultarCliente.setVisible(false);
+        RegistroMenuEvento.setVisible(false);
+        ActualizarCliente.setVisible(false);
+        ConsultarCliente.setVisible(false);
+        RegistroCliente.setVisible(false);
+        ActualizarMenu.setVisible(false);
+        ConsultarMenu.setVisible(false);
             consultaCliente.setText("");
             Rnombre2.setText("");
             Rapellido2.setText("");
@@ -976,6 +1373,74 @@ public class menuPrincipal extends javax.swing.JFrame {
         bAcutalizarCliente.setEnabled(true);
     }//GEN-LAST:event_jTableActualizarClienteMousePressed
 
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void consultaCliente1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_consultaCliente1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_consultaCliente1ActionPerformed
+
+    private void bConsultarCliente1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bConsultarCliente1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bConsultarCliente1ActionPerformed
+
+    private void jTableConsultaCliente1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableConsultaCliente1MousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTableConsultaCliente1MousePressed
+
+    private void jButtonCancelarMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCancelarMenuActionPerformed
+        if(JOptionPane.showConfirmDialog(null,"¿Seguro desea salir de la búsqueda?", "SALIR DE LA CONSULTA", JOptionPane.YES_NO_OPTION)==0){
+        RegistroCliente.setVisible(false);
+        logoprincipal.setVisible(true);
+        ActualizarCliente.setVisible(false);
+        ConsultarCliente.setVisible(false);
+        RegistroMenuEvento.setVisible(false);
+        ActualizarCliente.setVisible(false);
+        ConsultarCliente.setVisible(false);
+        RegistroCliente.setVisible(false);
+        ActualizarMenu.setVisible(false);
+        ConsultarMenu.setVisible(false);
+                  
+        RnombreMenu.setText("");
+        jComboBoxEntrada.setSelectedIndex(0);
+        jComboBoxPlatoFuerte.setSelectedIndex(0);
+        jComboBoxPostre.setSelectedIndex(0);
+        jComboBoxSorbete.setSelectedIndex(0);
+        jComboBoxTiemposMenu.setSelectedIndex(0);
+            
+        }
+    }//GEN-LAST:event_jButtonCancelarMenuActionPerformed
+
+    private void jButtonRegistroMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegistroMenuActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonRegistroMenuActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        RegistroCliente.setVisible(false);
+        logoprincipal.setVisible(true);
+        ActualizarCliente.setVisible(false);
+        ConsultarCliente.setVisible(false);
+        RegistroMenuEvento.setVisible(false);
+        ActualizarCliente.setVisible(false);
+        ConsultarCliente.setVisible(false);
+        RegistroCliente.setVisible(false);
+        ActualizarMenu.setVisible(false);
+        ConsultarMenu.setVisible(false);
+    }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void bAcutalizarCliente1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAcutalizarCliente1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bAcutalizarCliente1ActionPerformed
+
+    private void conActualizarCliente1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_conActualizarCliente1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_conActualizarCliente1ActionPerformed
+
+    private void jTableActualizarCliente1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableActualizarCliente1MousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTableActualizarCliente1MousePressed
+
     /**
      * @param args the command line arguments
      */
@@ -1015,12 +1480,14 @@ public class menuPrincipal extends javax.swing.JFrame {
     private javax.swing.JPanel ActualizarCliente;
     private javax.swing.JMenu ActualizarEvento;
     private javax.swing.JMenuItem ActualizarMenu;
+    private javax.swing.JPanel ActualizarMenuEvento;
     private javax.swing.JMenuItem ActualizarPago;
     private javax.swing.JMenuItem ActualizarTrabajador;
     private javax.swing.JMenu Clientes;
     private javax.swing.JPanel ConsultarCliente;
     private javax.swing.JMenu ConsultarEvento;
     private javax.swing.JMenuItem ConsultarMenu;
+    private javax.swing.JPanel ConsultarMenuEvento;
     private javax.swing.JMenu ConsultarPago;
     private javax.swing.JMenuItem ConsultarTrabajador;
     private javax.swing.JMenuItem EventoAct;
@@ -1033,27 +1500,48 @@ public class menuPrincipal extends javax.swing.JFrame {
     private javax.swing.JTextField Rapellido;
     private javax.swing.JTextField Rapellido1;
     private javax.swing.JTextField Rapellido2;
+    private javax.swing.JTextField Rapellido3;
+    private javax.swing.JTextField Rapellido5;
     private javax.swing.JMenu RegistrarEvento;
     private javax.swing.JMenuItem RegistrarMenu;
     private javax.swing.JMenuItem RegistrarPago;
     private javax.swing.JMenuItem RegistrarTrabajador;
     private javax.swing.JPanel RegistroCliente;
+    private javax.swing.JPanel RegistroMenuEvento;
     private javax.swing.JMenu Reportes;
     private javax.swing.JTextField RidCliente1;
+    private javax.swing.JTextField RidCliente2;
     private javax.swing.JTextField Rnombre;
     private javax.swing.JTextField Rnombre1;
     private javax.swing.JTextField Rnombre2;
+    private javax.swing.JTextField Rnombre3;
+    private javax.swing.JTextField Rnombre5;
+    private javax.swing.JTextField RnombreMenu;
     private javax.swing.JMenuItem actualizarCliente;
     private javax.swing.JButton bAcutalizarCliente;
+    private javax.swing.JButton bAcutalizarCliente1;
     private javax.swing.JButton bConsultarCliente;
+    private javax.swing.JButton bConsultarCliente1;
     private javax.swing.JButton conActualizarCliente;
+    private javax.swing.JButton conActualizarCliente1;
     private javax.swing.JTextField consulta;
+    private javax.swing.JTextField consulta1;
     private javax.swing.JTextField consultaCliente;
+    private javax.swing.JTextField consultaCliente1;
     private javax.swing.JMenuItem consultarCliente;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButtonCancalerRCliente;
+    private javax.swing.JButton jButtonCancelarMenu;
+    private javax.swing.JButton jButtonRegistroMenu;
+    private javax.swing.JComboBox<String> jComboBoxEntrada;
+    private javax.swing.JComboBox<String> jComboBoxPlatoFuerte;
+    private javax.swing.JComboBox<String> jComboBoxPostre;
+    private javax.swing.JComboBox<String> jComboBoxSorbete;
+    private javax.swing.JComboBox<String> jComboBoxTiemposMenu;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1070,8 +1558,30 @@ public class menuPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel45;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -1082,23 +1592,35 @@ public class menuPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTable jTableActualizarCliente;
+    private javax.swing.JTable jTableActualizarCliente1;
     private javax.swing.JTable jTableConsultaCliente;
+    private javax.swing.JTable jTableConsultaCliente1;
     private javax.swing.JPanel logoprincipal;
     private javax.swing.JMenuBar menu;
     private javax.swing.JMenuItem menuRegistrarCliente;
     private javax.swing.JFormattedTextField rcedula;
     private javax.swing.JFormattedTextField rcedula1;
     private javax.swing.JFormattedTextField rcedula2;
+    private javax.swing.JFormattedTextField rcedula3;
+    private javax.swing.JFormattedTextField rcedula5;
     private javax.swing.JFormattedTextField rcelular;
     private javax.swing.JFormattedTextField rcelular1;
     private javax.swing.JFormattedTextField rcelular2;
+    private javax.swing.JFormattedTextField rcelular3;
+    private javax.swing.JFormattedTextField rcelular5;
     private javax.swing.JTextField rcorreo;
     private javax.swing.JTextField rcorreo1;
     private javax.swing.JTextField rcorreo2;
+    private javax.swing.JTextField rcorreo3;
+    private javax.swing.JTextField rcorreo5;
     private javax.swing.JTextField rdirecc;
     private javax.swing.JTextField rdirecc1;
     private javax.swing.JTextField rdirecc2;
+    private javax.swing.JTextField rdirecc3;
+    private javax.swing.JTextField rdirecc5;
     private javax.swing.JMenuItem reservacion;
     // End of variables declaration//GEN-END:variables
 }
